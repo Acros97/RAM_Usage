@@ -6,6 +6,19 @@
 #include "windows.h"
 using namespace std;
 
+void SetConsoleDimensions(int width, int height) {
+	// OBtiene el manejador de la consola
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	// Define el tamaño del búfer de pantalla (debe ser al menos tan grande como la ventana)
+	COORD bufferSize = { static_cast<SHORT>(width), static_cast<SHORT>(height) };
+	SetConsoleScreenBufferSize(hConsole, bufferSize);
+
+	// Define las dimensiones de la ventana
+	SMALL_RECT windowSize = { 0, 0, static_cast<SHORT>(width - 1), static_cast<SHORT>(height - 1) };
+	SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
+}
+
 string StatusScreen(int percentage) {
 	string LSTATUS = "[                  ]";
 
@@ -33,6 +46,7 @@ string StatusScreen(int percentage) {
 
 int main()
 {
+	SetConsoleDimensions(60, 10);
 	while (true) {
 		system("CLS");
 		cout << "RAM Usage - Console version. Written by Daniel Fros. \n\n";

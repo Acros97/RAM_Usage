@@ -1,1 +1,4 @@
-﻿
+﻿  DesktopRAM.cpp
+c:\users\usuario\ram_usage\desktopram\desktopram.cpp(169): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\usuario\ram_usage\desktopram\desktopram.cpp(173): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  DesktopRAM.vcxproj -> C:\Users\usuario\RAM_Usage\x64\Debug\DesktopRAM.exe
