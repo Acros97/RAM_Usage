@@ -1,3 +1,3 @@
 # RAM_Usage
 Console and Desktop app. 2024.
-Change default startup proyect.
+Change default startup proyect (Console or aplication).
